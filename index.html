@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">
+        <span style="color: #ffd700">Tic</span>
+        <span style="color: #ff1493">Tac</span>
+        <span style="color: #ffd700">Toe</span>
+      </h1>
+      <div id="playerDetails">
+        <form id="playerDetailsForm">
+          <div class="labels">
+            <label for="player1"
+              ><span style="color: #ffd700">PLAYER 1&nbsp;</span> (
+              <span style="color: #ffd700">X</span> )</label
+            >
+            <label for="player1"
+              ><span style="color: #ff1493">PLAYER 2&nbsp;</span> (
+              <span style="color: #ff1493">O</span> )</label
+            >
+          </div>
+          <div class="inputs">
+            <input type="text" id="player1name" placeholder="Enter your Name"/>
+            <input type="text" id="player2name" placeholder="Enter your Name"/>
+          </div>
+        </form>
+        <div
+          style="
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <button id="start" onclick="start() ">START</button>
+        </div>
+      </div>
+      <div id="game">
+        <div class="players">
+          <div id="player1">
+            <b>PLAYER 1<br />( X )</b>
+          </div>
+          <div id="player2">
+            <b>PLAYER 2<br />( O )</b>
+          </div>
+        </div>
+        <div class="gameBlock">
+          <div class="blocks" id="B00" onclick="mark(this.id)"></div>
+          <div class="blocks" id="B01" onclick="mark(this.id)"></div>
+          <div class="blocks" id="B02" onclick="mark(this.id)"></div>
+          <div class="blocks" id="B10" onclick="mark(this.id)"></div>
+          <div class="blocks" id="B11" onclick="mark(this.id)"></div>
+          <div class="blocks" id="B12" onclick="mark(this.id)"></div>
+          <div class="blocks" id="B20" onclick="mark(this.id)"></div>
+          <div class="blocks" id="B21" onclick="mark(this.id)"></div>
+          <div class="blocks" id="B22" onclick="mark(this.id)"></div>
+        </div>
+        <div class="buttons">
+          <button id="playagain" onclick="playAgain()"><b>PLAY AGAIN</b></button>
+          <button id="reset" onclick="reset()"><b>RESET</b></button>
+        </div>
+      </div>
+      <div id="result">
+        <h1 id="congrats">
+          <b
+            ><span style="color: #ffd700">C</span
+            ><span style="color: #ff1493">O</span
+            ><span style="color: #ffd700">N</span
+            ><span style="color: #ff1493">G</span
+            ><span style="color: #ffd700">R</span
+            ><span style="color: #ff1493">A</span
+            ><span style="color: #ffd700">T</span
+            ><span style="color: #ff1493">U</span
+            ><span style="color: #ffd700">L</span
+            ><span style="color: #ff1493">A</span
+            ><span style="color: #ffd700">T</span
+            ><span style="color: #ff1493">I</span
+            ><span style="color: #ffd700">O</span
+            ><span style="color: #ff1493">N</span>
+          </b>
+        </h1>
+        <div id="resultBlock">
+          <div class="win">
+            <h3>WINNER</h3>
+            <br />
+            <div id="winner">
+              <b>PLAYER 1<br />( X )</b>
+            </div>
+          </div>
+          <div class="lose">
+            <h3>LOSER</h3>
+            <br />
+            <div id="loser">
+              <b>PLAYER 2<br />( O )</b>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="playagain" onclick="playAgain()"><b>PLAY AGAIN</b></button>
+          <button id="reset" onclick="reset()"><b>RESET</b></button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
