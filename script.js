@@ -176,13 +176,43 @@ function isWin(x, y) {
 }
 
 function showResult() {
-  let winner = document.getElementById("winner");
-  let loser = document.getElementById("loser");
+  let congrats = document.getElementById("congrats");
+  let win = document.querySelector(".win");
+  let lose = document.querySelector(".lose");
   if (res == "win") {
     // container.style = "background-color: #ffffff10;backdrop-filter: blur(15px);";
     game.style = "display:none";
     title.style = "display:none;";
     result.style = "display:flex;";
+    congrats.innerHTML = `<b
+    ><span style="color: #ffd700">C</span
+    ><span style="color: #ff1493">O</span
+    ><span style="color: #ffd700">N</span
+    ><span style="color: #ff1493">G</span
+    ><span style="color: #ffd700">R</span
+    ><span style="color: #ff1493">A</span
+    ><span style="color: #ffd700">T</span
+    ><span style="color: #ff1493">U</span
+    ><span style="color: #ffd700">L</span
+    ><span style="color: #ff1493">A</span
+    ><span style="color: #ffd700">T</span
+    ><span style="color: #ff1493">I</span
+    ><span style="color: #ffd700">O</span
+    ><span style="color: #ff1493">N</span>
+    </b>`;
+
+    win.innerHTML = `<h3>WINNER</h3>
+    <br />
+    <div id="winner">
+      <b>PLAYER 1<br />( X )</b>
+    </div>`;
+    lose.innerHTML = `<h3 style="color:white">LOSER</h3>
+    <br />
+    <div id="loser">
+      <b>PLAYER 2<br />( O )</b>
+    </div>`;
+    let winner = document.getElementById("winner");
+    let loser = document.getElementById("loser");
     if (player % 2 == 0) {
       winner.innerHTML = `<b>${player_1_Name.value}<br />( X )</b>`;
       winner.style = "border:1px solid black;";
@@ -190,7 +220,8 @@ function showResult() {
       loser.style = "color:black";
     } else {
       winner.innerHTML = `<b>${player_2_Name.value}<br />( O )</b>`;
-      winner.style = "background-color: #ff1493;box-shadow:  0 0 10px #FF1493;border:1px solid black;";
+      winner.style =
+        "background-color: #ff1493;box-shadow:  0 0 10px #FF1493;border:1px solid black;";
       loser.innerHTML = `<b>${player_1_Name.value}<br />( X )</b>`;
       loser.style = "background-color: #ffd700;box-shadow:none;color:black";
     }
@@ -198,16 +229,12 @@ function showResult() {
     game.style = "display:none";
     title.style = "display:none;";
     result.style = "display:flex;";
-
-    let congrats = document.getElementById("congrats");
+    console.log(1);
     congrats.innerHTML = `<b
     ><span style="color: #ffd700">T</span
     ><span style="color: #ff1493">I</span
     ><span style="color: #ffd700">E</span>
     </b>`;
-
-    let win = document.querySelector(".win");
-    let lose = document.querySelector(".lose");
 
     win.innerHTML = `<div id="winner">
     <b>${player_1_Name.value}<br />( X )</b>
